@@ -1,0 +1,14 @@
+<ul>
+<% @students.each do |student| %>
+  <li>
+    <img src="<%= student.photo_url %>">
+    <h3>
+      <% if student.twitter != "" %>
+        <a target="_blank" href="https://www.twitter.com/<%= student.twitter %>"><%= student.name %></a>
+      <% else %>
+        <%= student.name %>
+      <% end %>
+    </h3>
+  </li>
+<% end %>
+</ul>

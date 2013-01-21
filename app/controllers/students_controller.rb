@@ -4,6 +4,8 @@ class StudentsController < ApplicationController
 
   def morning
     @students = Student.fetch("am")
+
+    @color = params["color"]
   end
 
   def afternoon
